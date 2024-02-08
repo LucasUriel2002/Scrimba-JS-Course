@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Gliphys -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="banner" id="banner">
+        <!-- banner wave -->
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <!-- Title and Image -->
+        <div class="content">
+            <h1>Uriel's Dinner!</h1>
+            <img src="burger.png" alt="a burger icon">
+         </div>
+    </div>
+
+    
+    <div class="center" id="center">
+        <!-- Dynamically added menu in this class -->  
+    </div>
+
+    <div class="bottom" id="bottom">
+        <div class="order-container" id="order-container">
+            <h3>Your Order</h3>
+
+            <div class="items" id="items">
+                <!-- Dynamically added order list in this class --> 
+            </div>
+
+            <div class="order-total" id="order-total">
+                
+            </div>
+            <!-- confirm order btn -->
+            <button class="green-button" id="complete-btn">Complete Order</button>
+        </div>
+
+      
+
+    </div>
+    <div class="form-div" id="form-div">
+      
+        <form class="form"id="form" autocomplete="off">
+            <h3>Enter Card Details</h3>
+            <input type="text" name="client" placeholder="Enter your name" required>
+            <input type="text" name="card" placeholder="Enter card number" required>
+            <input type="text" name="cvv" placeholder="Enter CVV" required>
+            <input type="submit" class="green-button" id="pay-btn" value="Pay">
+        </form>
+    </div>
+    
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
