@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@100;400;600&display=swap');
+
+:root {
+    --btn: #090707;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 40pt;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+  margin: 0;
+}
+
+/* Projects Configs */
+.projects-container {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 5px 20px 10px 20px;
+    gap: 5px;
+}
+
+.project {
+    width: 300px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project img {
+    width: 300px;
+    height: 300px;
+    border-bottom: 1px solid #ddd;
+}
+
+.project p {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+.project p:hover {
+    background-color: #e0e0e0;
+}
+
+/* Tags animation */
+.button {
+  padding: 0px 10px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  font-size: 10pt;
+  text-align: center;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 200;
+  line-height: 1; 
+  font-size: 24px; 
+  display: inline-block; 
+  vertical-align: middle; 
+}
+
