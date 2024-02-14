@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const buttons = document.querySelectorAll(".button");
+  const buttons = document.querySelectorAll(".project");
 
-  buttons.forEach((button) => {
-    button.classList.add("animate");
+  buttons.forEach((button, index) => {
+    setTimeout(() => {
+      button.classList.add("animate");
+    }, index * 100);
   });
 });

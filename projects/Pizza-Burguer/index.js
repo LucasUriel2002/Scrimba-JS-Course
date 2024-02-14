@@ -5,7 +5,7 @@ const center = document.getElementById("center");
 let orderList = [];
 
 // button clicks handler
-function buttonListeners() {
+function main() {
   const addBtns = document.querySelectorAll(".add-btn");
   const removeBtns = document.querySelectorAll(".remove-btn");
   const completeBtn = document.getElementById("complete-btn");
@@ -71,23 +71,27 @@ function orderComplete() {
   const orderContainer = document.getElementById("order-container");
 
   orderContainer.innerHTML = `
-   <h3 class="finalMessage" id="finalMessage">
-  Thanks, ${clientData.get("client")}! Your order is on its way!</h3> `;
+    <h3 class="finalMessage orderAnimate" id="finalMessage">
+      Thanks, ${clientData.get("client")}! Your order is on its way!
+    </h3>`;
 }
 
 // render the order menu after a item was added
 function renderOrderMenu() {
   const orderContainer = document.getElementById("order-container");
-  orderList.length !== 0
-    ? (orderContainer.style.display = "flex")
-    : (orderContainer.style.display = "none");
+  if (orderList.length !== 0) {
+    orderContainer.style.display = "flex";
+    orderContainer.classList.add("orderAnimate");
+  } else {
+    orderContainer.style.display = "none";
+  }
 }
 
 // render the selected items in the order menu
 function renderOrderItems() {
   const order = document.getElementById("items");
   order.innerHTML = feedOrderHTML(getList());
-  buttonListeners(); //  Add the event listeners in the remove btns every time that a new item was added in the list
+  main(); //  Add the event listeners in the remove btns every time that a new item was added in the list
 }
 
 // render the total price
@@ -99,7 +103,10 @@ function renderTotalPrice() {
   <p>$${sumOrderTotal(getList())}</p>`;
 }
 
-// return the order total price
+/**
+ * coloca outra descricao aqui se quiser
+ * @return number total price of the order
+ */
 function sumOrderTotal(arr) {
   let total = 0;
 
@@ -177,11 +184,7 @@ function feedMenuHTML() {
   return menuHtml;
 }
 // render the menu items at the start
-function render() {
-  center.innerHTML += feedMenuHTML();
-  buttonListeners();
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  render();
+  center.innerHTML += feedMenuHTML();
+  main();
 });

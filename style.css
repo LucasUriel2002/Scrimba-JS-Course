@@ -51,6 +51,7 @@ span {
 }
 
 .project {
+    display: none;
     width: 300px;
     margin: 20px;
     background-color: #fff;
@@ -85,7 +86,7 @@ span {
     background-color: #e0e0e0;
 }
 
-/* Tags animation */
+/* Tags */
 .button {
   padding: 0px 10px;
   background-color: white;
@@ -110,4 +111,18 @@ span {
   display: inline-block; 
   vertical-align: middle; 
 }
+
+
+.animate {
+    display: block;
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
